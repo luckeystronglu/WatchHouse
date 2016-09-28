@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    
+    <ImageView 
+        android:id="@+id/iv_pic"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"/>
+    
+    <TextView
+        android:id="@+id/tv_title" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_toRightOf="@+id/iv_pic"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/iv_pic"
+        android:text="资讯标题"/>
+    
+     <TextView 
+         android:id="@+id/tv_fregion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_alignLeft="@+id/tv_title"
+        android:layout_below="@+id/tv_title"
+        android:textColor="#888"
+        android:text="大北京"/>
+     
+      <TextView 
+          android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignBaseline="@+id/tv_fregion"
+        android:textColor="#f00"
+        android:text="价格待定"/>
+      
+      <TextView 
+          android:id="@+id/tv_address"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/tv_title"
+          android:textSize="12sp"
+          android:textColor="#888"
+          android:layout_below="@+id/tv_fregion"
+          android:singleLine="true"
+          android:ellipsize="end"
+          android:text="房产地址"/>
+    
+      <!-- 资讯标签存放的布局 -->
+      <LinearLayout
+          android:id="@+id/ll_bookmark"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_alignLeft="@+id/tv_title"
+		  android:layout_below="@+id/tv_address"
+          />
+
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <!-- ?android:attr/actionBarSize 表示的是actionbar的高度 -->
+    <!-- 头部actionbar -->
+    <LinearLayout
+        android:id="@id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        android:background="@color/qqblue"
+        >
+        <TextView
+            android:id="@+id/tv_selectcity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_textcity"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:textColor="@color/checkedcity"
+            android:drawableRight="@drawable/icon_title_down_arrow"
+            android:drawablePadding="5dp"
+
+            />
+        <!--搜索城市-->
+        <RelativeLayout
+            android:id="@+id/city_house_editll"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/edit_area_house"
+            >
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:background="@null"
+                android:drawableLeft="@drawable/btn_search_img_normal"
+                android:drawablePadding="6dp"
+                android:layout_centerHorizontal="true"
+                android:hint="@string/city_edithint"
+                android:padding="4dp"
+                android:textColorHint="#fff"
+                android:textSize="@dimen/city_editTextsize" />
+
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/qr_cord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="8dp"
+            android:clickable="true"
+            android:src="@drawable/ic_sao_1_sao"/>
+
+    </LinearLayout>
+
+    <!--新闻展示页-->
+    <com.qfkf.widget.PullandFreshView
+        android:id="@+id/lv_frg01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        />
+
+
+
+</LinearLayout>

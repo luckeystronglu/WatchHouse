@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    
+    <!-- 图片 -->
+    <ImageView
+        android:id="@+id/iv_news_pic"
+        android:src="@drawable/list_default_image"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"/>
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/tv_news_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_news_pic"
+        android:layout_marginLeft="8dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="16sp"/>
+
+    <!-- 简介 -->
+    <TextView
+        android:id="@+id/tv_news_summy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_news_pic"
+        android:layout_below="@id/tv_news_title"
+        android:layout_alignLeft="@id/tv_news_title"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="16dp"
+        android:textSize="14sp"
+        android:textColor="#919194"
+        android:ellipsize="end"
+        android:maxLines="2"
+        />
+
+    <!-- 评论 -->
+    <TextView
+        android:id="@+id/tv_news_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/tv_news_c"
+        android:layout_alignTop="@+id/tv_news_c"
+        android:text="16"
+        android:textColor="#8b8888"
+        android:textSize="14sp"
+        />
+    
+    <TextView
+        android:id="@+id/tv_news_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/tv_news_title"
+        android:layout_alignBottom="@+id/iv_news_pic"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:text="评"
+        android:textColor="#8b8888"
+        android:textSize="14sp"
+        />
+
+</RelativeLayout>

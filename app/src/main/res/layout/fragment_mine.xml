@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/qqblue">
+
+        <ImageView
+            android:id="@+id/mine_background_img"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/mine_top_bg"
+          />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击登陆"
+            android:gravity="center"
+            android:drawablePadding="5dp"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/icon_default_avatar"
+            android:textColor="#fff"
+            />
+
+        <ImageView
+            android:id="@+id/mine_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/btn_setting_normal"
+            />
+
+    </RelativeLayout>
+
+
+
+    <!--我的Q币-->
+    <RelativeLayout
+        android:id="@+id/relative_my_Qbi"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:text="我的Q币"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/ic_mine_activity_myqb"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/mine_qb_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/mine_guide_btn"/>
+
+    </RelativeLayout>
+
+    <!--分隔栏-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e9e7e7"
+        />
+
+    <!--我的收藏-->
+    <RelativeLayout
+        android:id="@+id/relative_my_collect"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:text="我的收藏"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/ic_mine_activity_collection"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/mine_collect_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/mine_guide_btn"/>
+
+    </RelativeLayout>
+
+    <!--分隔栏-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e9e7e7"
+        />
+
+
+    <!--我的团购-->
+    <RelativeLayout
+        android:id="@+id/relative_my_group"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:text="我的团购"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/ic_mine_activity_group"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/mine_group_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/mine_guide_btn"/>
+
+    </RelativeLayout>
+
+    <!--分隔栏-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e9e7e7"
+        />
+
+
+    <!--我的看房团-->
+    <RelativeLayout
+        android:id="@+id/relative_my_baoming"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:text="我的看房团"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/ic_mine_activity_baoming"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/mine_baoming_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/mine_guide_btn"/>
+
+    </RelativeLayout>
+
+    <!--分隔栏-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e9e7e7"
+        />
+
+    <!--应用推荐-->
+    <RelativeLayout
+        android:id="@+id/relative_my_commend"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:text="我的团购"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/ic_mine_activity_app_commend"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/mine_commed_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/mine_guide_btn"/>
+
+    </RelativeLayout>
+
+    <!--分隔栏-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e9e7e7"
+        />
+
+
+
+</LinearLayout>

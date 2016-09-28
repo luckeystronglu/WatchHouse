@@ -1,0 +1,1 @@
+include ':app', ':houselibrary', ':barCodeTest', ':scrollable'

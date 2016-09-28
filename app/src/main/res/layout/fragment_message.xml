@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/qqblue">
+
+        <TextView
+            android:id="@+id/details_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="消息"
+            android:paddingBottom="10dp"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+
+    <!--热点资讯-->
+    <RelativeLayout
+        android:id="@+id/relative_redian"
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/msg_redian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_redian"/>
+
+        <TextView
+            android:id="@+id/msg_redian_title"
+            android:text="热点资讯"
+            android:textSize="18sp"
+            android:layout_toRightOf="@+id/msg_redian"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/msg_redian_date"
+            android:text="今天"
+            android:gravity="right"
+            android:layout_marginRight="12dp"
+            android:textSize="14sp"
+            android:textColor="#c3bdbd"
+            android:layout_toRightOf="@+id/msg_redian_title"
+            android:layout_alignTop="@+id/msg_redian_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/msg_redian_summary"
+            android:text="高房价拐点何时到来？只等人民币国际化。"
+            android:textColor="#a7a2a2"
+            android:textSize="14sp"
+            android:layout_alignLeft="@+id/msg_redian_title"
+            android:layout_below="@+id/msg_redian_title"
+            android:layout_marginTop="6dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="8dp"
+            android:background="#e9e7e7"
+            android:layout_alignLeft="@+id/msg_redian_title"
+            android:layout_below="@+id/msg_redian_summary"
+            />
+
+    </RelativeLayout>
+
+    <!--楼盘动态消息-->
+    <RelativeLayout
+        android:id="@+id/relative_dongdai"
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/msg_dongdai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_dongtai"/>
+
+        <TextView
+            android:id="@+id/msg_dongdai_title"
+            android:text="楼盘动态消息"
+            android:textSize="18sp"
+            android:layout_toRightOf="@+id/msg_dongdai"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/msg_dongdai_summary"
+            android:text="报名团购，实时获取最新动态"
+            android:textColor="#a7a2a2"
+            android:textSize="14sp"
+            android:layout_alignLeft="@+id/msg_dongdai_title"
+            android:layout_below="@+id/msg_dongdai_title"
+            android:layout_marginTop="6dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="8dp"
+            android:background="#e9e7e7"
+            android:layout_alignLeft="@+id/msg_dongdai_title"
+            android:layout_below="@+id/msg_dongdai_summary"
+            />
+
+    </RelativeLayout>
+
+    <!--线路报名消息-->
+    <RelativeLayout
+        android:id="@+id/relative_message"
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/msg_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_xianlu"/>
+
+        <TextView
+            android:id="@+id/msg_message_title"
+            android:text="线路报名消息"
+            android:textSize="18sp"
+            android:layout_toRightOf="@+id/msg_message"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/msg_message_summary"
+            android:text="报名看房团，免费接送，礼品丰厚"
+            android:textColor="#a7a2a2"
+            android:textSize="14sp"
+            android:layout_alignLeft="@+id/msg_message_title"
+            android:layout_below="@+id/msg_message_title"
+            android:layout_marginTop="6dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="8dp"
+            android:background="#e9e7e7"
+            android:layout_alignLeft="@+id/msg_message_title"
+            android:layout_below="@+id/msg_message_summary"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

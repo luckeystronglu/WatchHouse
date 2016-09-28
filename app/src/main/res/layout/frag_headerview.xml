@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/img_header_vp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        />
+    <TextView
+        android:id="@+id/header_img_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这是配合照片的文字"
+        android:textSize="16sp"
+        android:textColor="@color/checkedcity"
+        android:layout_alignBottom="@+id/img_header_vp"
+        android:layout_margin="5dp"
+        />
+
+</RelativeLayout>

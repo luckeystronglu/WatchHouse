@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/qqblue">
+
+        <ImageView
+            android:id="@+id/web_back"
+            android:layout_alignParentLeft="true"
+            android:layout_alignBottom="@+id/details_title"
+            android:layout_marginLeft="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dp"
+            android:src="@drawable/btn_back_normal"/>
+
+        <!--android:rotation="180"-->
+
+        <TextView
+            android:id="@+id/details_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="房产资讯"
+            android:paddingBottom="10dp"
+            android:textColor="#948926"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/web_share"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/details_title"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:layout_marginRight="15dp"
+            android:paddingBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_share_normal"/>
+
+
+    </RelativeLayout>
+
+
+    <WebView
+        android:id="@+id/wb"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+       >
+
+    </WebView>
+
+    <RadioGroup
+        android:id="@+id/rg_pinglun"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:padding="10dp"
+        android:background="#4888"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/details_rb_publicping"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="#fff"
+            android:text="发表评论"
+            android:textColor="@drawable/selector_text_color"
+            android:button="@null"
+            android:gravity="left|center_vertical"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/icon_galley_post_comment"
+            android:drawablePadding="4dp"
+            />
+        <RadioButton
+            android:id="@+id/details_rb_lookpinglun"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:paddingLeft="30dp"
+            android:background="#fff"
+            android:textColor="@drawable/selector_text_color"
+            android:button="@null"
+            android:gravity="left|center_vertical"
+            android:drawableLeft="@drawable/icon_galley_comment"
+            android:drawablePadding="4dp"
+            />
+
+    </RadioGroup>
+
+    <!--<LinearLayout
+        android:id="@+id/bot_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#2888"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/details_btn1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:text="发表评论"
+            android:background="@null"
+            android:drawableTint=""
+            android:drawableLeft="@drawable/icon_galley_post_comment"
+            android:onClick="btnClick"/>
+
+        <Button
+            android:id="@+id/details_btn2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="0"
+            android:drawableLeft="@drawable/icon_galley_comment"
+            android:onClick="btnClick"
+
+            />
+
+    </LinearLayout>-->
+
+</LinearLayout>

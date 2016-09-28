@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="hello">Hello World, BarCodeTestActivity!</string>
+
+    <string name="app_name">看房网</string>
+    <string name="default_textcity">北京</string>
+    <string name="choice_city">选择城市</string>
+
+    <!--home  页面-->
+    <string name="city_edithint">区域/楼盘名/开发商</string>
+    <string name="choicecity_tv">选择城市</string>
+    <string name="edit_city">中文/拼音/首字母</string>
+
+
+</resources>

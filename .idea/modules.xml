@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/WatchHouse.iml" filepath="$PROJECT_DIR$/WatchHouse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/barCodeTest/barCodeTest.iml" filepath="$PROJECT_DIR$/barCodeTest/barCodeTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/houselibrary/houselibrary.iml" filepath="$PROJECT_DIR$/houselibrary/houselibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scrollable/scrollable.iml" filepath="$PROJECT_DIR$/scrollable/scrollable.iml" />
+    </modules>
+  </component>
+</project>
