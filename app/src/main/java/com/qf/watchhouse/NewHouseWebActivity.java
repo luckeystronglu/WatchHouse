@@ -24,7 +24,7 @@ import butterknife.OnClick;
 /**
  * Created by lenovo on 2016/9/25.
  */
-public class HomeWebActivity extends BaseActivity implements DownUtil.OnDownListener {
+public class NewHouseWebActivity extends BaseActivity implements DownUtil.OnDownListener {
 
     @Bind(R.id.web_back)
     ImageView webBack;

@@ -1,7 +1,10 @@
 package com.qf.watchhouse;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 
@@ -15,6 +18,7 @@ import com.qfkf.base.BaseActivity;
 import com.qfkf.util.DownUtil;
 import com.qfkf.widget.citylabel.LableCompareView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.halfbit.pinnedsection.PinnedSectionListView;
@@ -60,7 +64,28 @@ public class CityChoiceActivity extends BaseActivity implements AdapterView.OnIt
 
     @Override
     protected void loadDatas() {
-        new DownUtil().setOnDownListener(this).downJSON(Contants.URL_SELECT_CITY);
+        Cursor cursor = sqLiteDatabase.query("citynames",
+                new String[]{"cityid","cityname","type"},null,null,null,null,null);
+        List<CityEntity> cityEntityList = new ArrayList<>();
+        while (cursor.moveToNext()){
+            CityEntity entity = new CityEntity();
+            int cityid = cursor.getInt(cursor.getColumnIndex("cityid"));
+            String cityname = cursor.getString(cursor.getColumnIndex("cityname"));
+            int type = cursor.getInt(cursor.getColumnIndex("type"));
+            Log.d("print", "数据库 " +cityid+"----"+type+">>>>"+cityname);
+            entity.setCityid(cityid);
+            entity.setCityname(cityname);
+            entity.setType(type);
+            cityEntityList.add(entity);
+        }
+
+        if (cityEntityList.size() > 0){
+            cityAdapter.setDatas(cityEntityList);
+        }else {
+            new DownUtil().setOnDownListener(this).downJSON(Contants.URL_SELECT_CITY);
+        }
+
+
     }
 
     @Override
@@ -86,8 +111,19 @@ public class CityChoiceActivity extends BaseActivity implements AdapterView.OnIt
     public void downSucc(Object object) {
         if (object != null) {
             List<CityEntity> list = (List<CityEntity>) object;
+            for (CityEntity cityEntity : list) {
+                savetoDB(cityEntity.getCityid(),cityEntity.getCityname(),cityEntity.getType());
+            }
             cityAdapter.setDatas(list);
         }
+    }
+
+    private long savetoDB(int cityid, String cityname, int type) {
+        ContentValues values = new ContentValues();
+        values.put("cityid",cityid);
+        values.put("cityname",cityname);
+        values.put("type",type);
+        return sqLiteDatabase.insert("citynames",null,values);
     }
 
     @Override

@@ -23,6 +23,7 @@ import com.qf.watchhouse.CityChoiceActivity;
 import com.qf.watchhouse.HomeWebActivity;
 import com.qf.watchhouse.NewHouseActivity;
 import com.qf.watchhouse.R;
+import com.qf.widget.HomeHeadView2;
 import com.qf.widget.HomeVpView;
 import com.qfkf.base.BaseFragment;
 import com.qfkf.util.DownUtil;
@@ -69,6 +70,9 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
 
     //头部轮播图
     private HomeVpView homeVpView;
+
+    //首页第二个头部控件（8个可点击图标）
+    private HomeHeadView2 homeHeadView2;
     private TextView mid_xinfang;
 
 
@@ -126,10 +130,13 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
 //        });
 
         //添加第二个headerview
-        View viewmid = LayoutInflater.from(getContext()).inflate(R.layout.frag1_header_mid, null);
-        newsListView.addHeaderView(viewmid);
+//        View viewmid = LayoutInflater.from(getContext()).inflate(R.layout.frag1_header_mid, null);
+//        newsListView.addHeaderView(viewmid);
 
-        mid_xinfang = (TextView) view.findViewById(R.id.middle_xingfang);
+        homeHeadView2 = new HomeHeadView2(getActivity());
+        newsListView.addHeaderView(homeHeadView2);
+
+        mid_xinfang = (TextView) homeHeadView2.findViewById(R.id.middle_xingfang);
         mid_xinfang.setOnClickListener(this);
 
     }
@@ -318,11 +325,14 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Intent intent = new Intent(getActivity(), HomeWebActivity.class);
-        intent.putExtra("id", datas.get(position).getId());
-        intent.putExtra("commentcount", datas.get(position).getCommentcount() + "");
-        Log.d("print", "onItemClick:---------> " + datas.get(position).getId());
-        startActivity(intent);
+        if (position != 1) {
+            Intent intent = new Intent(getActivity(), HomeWebActivity.class);
+            intent.putExtra("id", datas.get(position - 2).getId());
+            intent.putExtra("commentcount", datas.get(position - 2).getCommentcount() + "");
+//        Log.d("print", "onItemClick:---------> " + datas.get(position).getId());
+            startActivity(intent);
+        }
+
     }
 
     @Override

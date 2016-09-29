@@ -25,6 +25,7 @@ public class WelcomeActivity extends BaseActivity {
             public void run() {
                 startActivityForAnimation(new Intent(WelcomeActivity.this,MainActivity.class),
                         R.anim.anim_city_bottom_in,R.anim.amin_city_quiet);
+                finish();
             }
         },1500);
     }
