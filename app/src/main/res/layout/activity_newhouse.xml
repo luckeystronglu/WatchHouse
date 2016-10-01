@@ -5,13 +5,56 @@
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
-   	<Spinner
-   	    android:id="@+id/sp"
-		android:layout_marginTop="10dp"
-		android:layout_marginLeft="10dp"
-		android:layout_marginRight="10dp"
-   	    android:layout_width="match_parent"
-   	    android:layout_height="wrap_content"/>
+	<RelativeLayout
+		android:id="@+id/actionbar"
+		android:background="@color/qqblue"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<ImageView
+			android:id="@+id/web_back"
+			android:layout_alignParentLeft="true"
+			android:layout_alignBottom="@+id/tv_xingfang"
+			android:layout_marginLeft="6dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingBottom="6dp"
+			android:src="@drawable/btn_back_normal"/>
+
+
+
+		<TextView
+			android:id="@+id/tv_xingfang"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingTop="10dp"
+			android:paddingBottom="10dp"
+			android:text="新房"
+			android:textColor="@color/white_color"
+			android:textSize="@dimen/choicecity_textsize"
+			android:gravity="center"
+			/>
+
+		<ImageView
+			android:id="@+id/img_xingfang_find"
+			android:layout_alignParentRight="true"
+			android:layout_alignBottom="@+id/tv_xingfang"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="6dp"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:scaleX="1.5"
+			android:scaleY="1.5"
+			android:src="@drawable/btn_search_img_normal"/>
+	</RelativeLayout>
+
+   	<!--<Spinner-->
+   	    <!--android:id="@+id/sp"-->
+		<!--android:layout_marginTop="10dp"-->
+		<!--android:layout_marginLeft="10dp"-->
+		<!--android:layout_marginRight="10dp"-->
+   	    <!--android:layout_width="match_parent"-->
+   	    <!--android:layout_height="wrap_content"/>-->
     
     <ListView
         android:id="@+id/lv"

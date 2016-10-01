@@ -74,6 +74,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
     //首页第二个头部控件（8个可点击图标）
     private HomeHeadView2 homeHeadView2;
     private TextView mid_xinfang;
+    private String cityname;
 
 
     @Override
@@ -90,7 +91,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
 //        qrcode_img.setOnClickListener(this);
 
 
-        String cityname = ShareUtil.getString("cityname");
+        cityname = ShareUtil.getString("cityname");
         int cityid = ShareUtil.getInt("cityid");
         if (cityid != -1 && cityname != null) {
             this.cityId = cityid;
@@ -136,8 +137,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
         homeHeadView2 = new HomeHeadView2(getActivity());
         newsListView.addHeaderView(homeHeadView2);
 
-        mid_xinfang = (TextView) homeHeadView2.findViewById(R.id.middle_xingfang);
-        mid_xinfang.setOnClickListener(this);
+
 
     }
 
@@ -147,6 +147,10 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
         //加载相应的城市数据
         newsUrl = String.format(Contants.URL_NEWS, newsCount, 0, 0, cityId);
         new DownUtil().setOnDownListener(this).downJSON(newsUrl);
+
+        //新房
+        mid_xinfang = (TextView) homeHeadView2.findViewById(R.id.middle_xingfang);
+        mid_xinfang.setOnClickListener(this);
 
         //加载城市头部图片数据
         homeVpView.setCityid(getFragmentManager(), cityId);
@@ -165,7 +169,10 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
                 getActivity().overridePendingTransition(R.anim.anim_city_bottom_in, R.anim.amin_city_quiet);
                 break;
             case R.id.middle_xingfang:
-                startActivity(new Intent(getActivity(), NewHouseActivity.class));
+                Intent intent1 = new Intent(getActivity(), NewHouseActivity.class);
+                intent1.putExtra("cityid",cityId);
+                intent1.putExtra("cityname",cityname);
+                startActivity(intent1);
                 break;
         }
     }
